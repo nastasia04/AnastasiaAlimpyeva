@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suiteForAllTests">
+
+    <test name="allFunctions">
+        <classes>
+            <class name="hw1.TestClassAddition"/>
+            <class name="hw1.TestClassDivision"/>
+            <class name="hw1.TestClassMultiplication"/>
+            <class name="hw1.TestClassSubtraction"/>
+            <class name="hw1.TestClassPositiveAndNegative"/>
+            <class name="hw1.TestClassExponentiation"/>
+            <class name="hw1.TestClassTrigonometry"/>
+        </classes>
+    </test>
+
+</suite>

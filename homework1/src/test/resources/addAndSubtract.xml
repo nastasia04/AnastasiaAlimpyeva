@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="addAndSubtract">
+
+    <test name="addFunctions">
+        <classes>
+            <class name="hw1.TestClassAddition">
+                <methods>
+                    <include name="testIntegerAddition"/>
+                    <include name="testLongAddition"/>
+                    <include name="testDoubleAddition"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="subFunctions">
+        <classes>
+            <class name="hw1.TestClassSubtraction">
+                <methods>
+                    <include name="testIntegerSubtraction"/>
+                    <include name="testLongSubtraction"/>
+                    <include name="testDoubleSubtraction"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
