@@ -14,6 +14,7 @@ public class TestClassExponentiation extends TestClass {
 
     @Test(dataProvider = "doubleValues")
     public void testSqrt(double num) {
+        // TODO If value for sqrt function less then 0 it should be separate test
         if (num < 0) {
             assertThrows(NumberFormatException.class, () -> calculator.sqrt(num));
         } else

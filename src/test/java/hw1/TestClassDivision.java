@@ -8,6 +8,7 @@ import static org.testng.Assert.*;
 public class TestClassDivision extends TestClass {
     @Test(dataProvider = "integerOperands")
     public void testIntegerDivision(int firstNum, int secondNum) {
+        // TODO The division to 0 should be separate test
         if (secondNum == 0) {
             assertThrows(NumberFormatException.class, () -> calculator.div(firstNum, secondNum));
         } else {
@@ -18,6 +19,7 @@ public class TestClassDivision extends TestClass {
 
     @Test(dataProvider = "longOperands")
     public void testLongDivision(long firstNum, long secondNum) {
+        // TODO The division to 0 should be separate test
         if (secondNum == 0L) {
             assertThrows(NumberFormatException.class, () -> calculator.div(firstNum, secondNum));
         } else {
