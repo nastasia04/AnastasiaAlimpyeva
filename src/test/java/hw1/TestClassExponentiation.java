@@ -14,7 +14,7 @@ public class TestClassExponentiation extends TestClass {
 
     @Test(dataProvider = "doubleValues")
     public void testSqrt(double num) {
-        // TODO If value for sqrt function less then 0 it should be separate test
+        // TODO Why is this if here? Is it required?
         if (num > 0) {
             assertEquals(calculator.sqrt(num), Math.sqrt(num),
                     "The result of a square root of " + num + " is unexpected ");
@@ -22,6 +22,7 @@ public class TestClassExponentiation extends TestClass {
     }
     @Test(dataProvider = "doubleValues")
     public void testSqrtFromValueLessZero(double num) {
+        // TODO Why is this if here? Is it required?
         if (num < 0) {
             assertThrows(NumberFormatException.class, () -> calculator.sqrt(num));
         }
