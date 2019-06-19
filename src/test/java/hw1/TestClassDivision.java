@@ -33,14 +33,13 @@ public class TestClassDivision extends TestClass {
     }
 
     @Test(dataProvider = "integerOperands")
-    void testIntegerDivisionByZero(int firstNum, int secondNum){
+    void testIntegerDivisionToZero(int firstNum, int secondNum){
         if (secondNum == 0) {
             assertThrows(NumberFormatException.class, () -> calculator.div(firstNum, secondNum));
         }
-
     }
     @Test(dataProvider = "longOperands")
-    void testLongDivisionByZero(long firstNum, long secondNum){
+    void testLongDivisionToZero(long firstNum, long secondNum){
         if (secondNum == 0L) {
             assertThrows(NumberFormatException.class, () -> calculator.div(firstNum, secondNum));
         }
