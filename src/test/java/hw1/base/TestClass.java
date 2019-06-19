@@ -15,12 +15,12 @@ public class TestClass {
 
     @DataProvider
     public static Object[][] integerOperands() {
-        return new Object[][]{{0, 27}, {100, 0}, {-600, 360}, {87, -7000}, {95, -95}};
+        return new Object[][]{{0, 27}, {-600, 360}, {87, -7000}, {95, -95}};
     }
 
     @DataProvider
     public static Object[][] longOperands() {
-        return new Object[][]{{101L, 0L}, {0L, 110L}, {-2147483648L, 3608765330L},
+        return new Object[][]{{0L, 110L}, {-2147483648L, 3608765330L},
                 {1009877544L, -700000009L}, {95L, -95L}};
     }
 
