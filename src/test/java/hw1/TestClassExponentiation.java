@@ -14,11 +14,16 @@ public class TestClassExponentiation extends TestClass {
 
     @Test(dataProvider = "doubleValues")
     public void testSqrt(double num) {
-        if (num < 0) {
-            assertThrows(NumberFormatException.class, () -> calculator.sqrt(num));
-        } else
+        // TODO If value for sqrt function less then 0 it should be separate test
+        if (num > 0) {
             assertEquals(calculator.sqrt(num), Math.sqrt(num),
                     "The result of a square root of " + num + " is unexpected ");
-
+        }
+    }
+    @Test(dataProvider = "doubleValues")
+    public void testSqrtFromValueLessZero(double num) {
+        if (num < 0) {
+            assertThrows(NumberFormatException.class, () -> calculator.sqrt(num));
+        }
     }
 }
