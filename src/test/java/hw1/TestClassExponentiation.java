@@ -22,14 +22,12 @@ public class TestClassExponentiation extends TestClass {
 
     @Test(dataProvider = "doubleValuesNotNegative")
     public void testSqrt(double num) {
-        // TODO Why is this if here? Is it required?
             assertEquals(calculator.sqrt(num), Math.sqrt(num),
                     "The result of a square root of " + num + " is unexpected ");
     }
     //Test fails
     @Test(dataProvider = "doubleValuesNegative", enabled = false)
     public void testSqrtFromValueLessZero(double num) {
-        // TODO Why is this if here? Is it required?
             assertThrows(NumberFormatException.class, () -> calculator.sqrt(num));
     }
 }
