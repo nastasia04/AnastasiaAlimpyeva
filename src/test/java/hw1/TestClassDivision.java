@@ -1,7 +1,6 @@
 package hw1;
 
 import hw1.base.TestClass;
-// TODO Unused imports
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -19,14 +18,12 @@ public class TestClassDivision extends TestClass {
 
     @Test(dataProvider = "integerOperands")
     public void testIntegerDivision(int firstNum, int secondNum) {
-        // TODO Why is this if here? Is it required?
             assertEquals(calculator.div(firstNum, secondNum), firstNum / secondNum,
                     "The result of division " + firstNum + " by " + secondNum + "is unexpected ");
     }
 
     @Test(dataProvider = "longOperands")
     public void testLongDivision(long firstNum, long secondNum) {
-        // TODO Why is this if here? Is it required?
             assertEquals(calculator.div(firstNum, secondNum), firstNum / secondNum,
                     "The result of division " + firstNum + " by " + secondNum + "is unexpected ");
     }
@@ -39,12 +36,10 @@ public class TestClassDivision extends TestClass {
 
     @Test(dataProvider = "integerOperandsWithZero")
     void testIntegerDivisionToZero(int firstNum, int secondNum){
-        // TODO Why is this if here? Is it required?
             assertThrows(NumberFormatException.class, () -> calculator.div(firstNum, secondNum));
     }
     @Test(dataProvider = "longOperandsWithZero")
     void testLongDivisionToZero(long firstNum, long secondNum){
-        // TODO Why is this if here? Is it required?
             assertThrows(NumberFormatException.class, () -> calculator.div(firstNum, secondNum));
     }
 }
