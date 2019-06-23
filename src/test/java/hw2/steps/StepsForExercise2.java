@@ -24,6 +24,7 @@ public class StepsForExercise2 extends BaseTestSteps {
     }
 
     public void clickOnTheSubcategory(String xpathSearch) {
+        // TODO It could be replaced by the driver.findElement(By.xpath(xpathSearch)).click();
         WebElement item = driver.findElement(By.xpath(xpathSearch));
         item.click();
     }

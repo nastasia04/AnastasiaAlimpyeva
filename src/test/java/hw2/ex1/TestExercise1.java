@@ -9,6 +9,7 @@ import java.util.List;
 
 public class TestExercise1 extends BaseClass {
     private StepsForExercise1 step;
+    // TODO It is better use 'private static final' modifier for constants
     private List<String> expectedHeaderMenuText = Arrays.asList
             ("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
     private List<String> expectedTextOnTheIndexPage = Arrays.asList(
