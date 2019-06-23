@@ -30,6 +30,7 @@ public class BaseTestSteps {
     }
 
     public void checkUserIsLogged(String correctUserName) {
+        // TODO This variable is redundant
         WebElement userName = driver.findElement(By.xpath("//span[@id='user-name']"));
         assertEquals(userName.getText(), correctUserName, "The user name is unexpected");
     }
@@ -39,6 +40,7 @@ public class BaseTestSteps {
         assertTrue(item.isDisplayed(), "Items should be displayed");
     }
 
+    // TODO checkItemsAreDisplayedAndHadTheCorrectText use have instead of had
     public void checkItemsAreDisplayedAndHadTheCorrectText(String xpathSearch,
                                                            List<String> expectedText) {
         List<WebElement> webElements = driver.findElements(By.xpath(xpathSearch));
@@ -53,12 +55,16 @@ public class BaseTestSteps {
         assertEquals(webElements.size(), expectedSize, "The size of web elements is unexpected");
     }
 
+    // TODO getTextFrom...
     protected List<String> takeTextFromListOfWebElements(List<WebElement> webElements) {
+        // TODO webElement -> webElement.getText() Could be replaced WebElement::getText
         return webElements.stream().map(webElement -> webElement.getText()).collect(Collectors.toList());
     }
 
     protected void checkElementsFromTheListAreDisplayed(List<WebElement> webElements) {
         SoftAssert softAssert = new SoftAssert();
+        // TODO stream() is not required here. Could be used only webElements.forEach( ... )
+        // TODO Please pay attention IDEA comments
         webElements.stream().forEach(webElement -> softAssert.assertTrue(webElement.isDisplayed()));
         softAssert.assertAll();
     }
