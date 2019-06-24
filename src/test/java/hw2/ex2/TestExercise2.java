@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class TestExercise2 extends BaseClass {
-    // TODO It is better use 'private static final' modifier for constants - fixed
     private StepsForExercise2 step;
     private static final List<String> expectedOptionsOnService = Arrays.asList(
             "Support", "Dates", "Complex Table", "Simple Table", "Table with pages",
@@ -47,17 +46,14 @@ public class TestExercise2 extends BaseClass {
 
         //11 -12. Select checkboxes and assert that for each checkbox
         // there is an individual log row and value is corresponded to the status of checkbox.
-        // TODO Is it possible send as parameter name of checkboxes, options and etc.? - fixed
         step.checkSelectItemAndCheckItInTheLog(NamesForSelectSections.CHECKBOX,
                 "Water",
                 true);
-        // TODO Is it possible send as parameter name of checkboxes, options and etc.? - fixed
         step.checkSelectItemAndCheckItInTheLog(NamesForSelectSections.CHECKBOX,
                 "Wind",
                 true);
 
         //13-14. Select radio and check it
-        // TODO Is it possible send as parameter name of checkboxes, options and etc.? - fixed
         step.checkSelectItemAndCheckItInTheLog(NamesForSelectSections.RADIO,
                 "Selen",
                 true);
@@ -65,17 +61,14 @@ public class TestExercise2 extends BaseClass {
         //15 -16. Select in dropdown Yellow and check it
         String xpath = " //select[@class='uui-form-element']";
         driver.findElement(By.xpath(xpath)).click();
-        // TODO Is it possible send as parameter name of checkboxes, options and etc.? - fixed
         step.checkSelectItemAndCheckItInTheLog(NamesForSelectSections.DROPDOWN,
                 "Yellow",
                 true);
 
         //17-18. Unselect and assert checkboxes
-        // TODO Is it possible send as parameter name of checkboxes, options and etc.? - fixed
         step.checkSelectItemAndCheckItInTheLog(NamesForSelectSections.CHECKBOX,
                 "Water",
                 false);
-        // TODO Is it possible send as parameter name of checkboxes, options and etc.? - fixed
         step.checkSelectItemAndCheckItInTheLog(NamesForSelectSections.CHECKBOX,
                 "Wind",
                 false);
@@ -83,7 +76,6 @@ public class TestExercise2 extends BaseClass {
     }
 
     private List<String> listToUpperCase(List<String> words) {
-        // TODO option -> option.toUpperCase() could be replaced String::toUpperCase - fixed
         return words.stream().map(String::toUpperCase).collect(Collectors.toList());
     }
 }
