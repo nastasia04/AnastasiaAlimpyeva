@@ -30,8 +30,9 @@ public class BaseTestSteps {
     }
 
     public void checkUserIsLogged(String correctUserName) {
-        WebElement userName = driver.findElement(By.xpath("//span[@id='user-name']"));
-        assertEquals(userName.getText(), correctUserName, "The user name is unexpected");
+        // TODO This variable is redundant - fixed
+        assertEquals(driver.findElement(By.xpath("//span[@id='user-name']")).getText(),
+                correctUserName, "The user name is unexpected");
     }
 
     public void checkElementIsDisplayed(String xpathSearch) {
@@ -39,13 +40,14 @@ public class BaseTestSteps {
         assertTrue(item.isDisplayed(), "Items should be displayed");
     }
 
-    public void checkItemsAreDisplayedAndHadTheCorrectText(String xpathSearch,
-                                                           List<String> expectedText) {
+    // TODO checkItemsAreDisplayedAndHaveTheCorrectText use have instead of had - fixed
+    public void checkItemsAreDisplayedAndHaveTheCorrectText(String xpathSearch,
+                                                            List<String> expectedText) {
         List<WebElement> webElements = driver.findElements(By.xpath(xpathSearch));
         checkSizeOfTheListOfElements(webElements, expectedText.size());
         checkElementsFromTheListAreDisplayed(webElements);
 
-        List<String> headElementsText = takeTextFromListOfWebElements(webElements);
+        List<String> headElementsText = getTextFromListOfWebElements(webElements);
         assertEquals(headElementsText, expectedText, "Text in web elements is unexpected");
     }
 
@@ -53,13 +55,17 @@ public class BaseTestSteps {
         assertEquals(webElements.size(), expectedSize, "The size of web elements is unexpected");
     }
 
-    protected List<String> takeTextFromListOfWebElements(List<WebElement> webElements) {
-        return webElements.stream().map(webElement -> webElement.getText()).collect(Collectors.toList());
+    // TODO getTextFrom... - fixed
+    protected List<String> getTextFromListOfWebElements(List<WebElement> webElements) {
+        // TODO webElement -> webElement.getText() Could be replaced WebElement::getText - fixed
+        return webElements.stream().map(WebElement::getText).collect(Collectors.toList());
     }
 
     protected void checkElementsFromTheListAreDisplayed(List<WebElement> webElements) {
         SoftAssert softAssert = new SoftAssert();
-        webElements.stream().forEach(webElement -> softAssert.assertTrue(webElement.isDisplayed()));
+        // TODO stream() is not required here. Could be used only webElements.forEach( ... ) - fixed
+        // TODO Please pay attention IDEA comments
+        webElements.forEach(webElement -> softAssert.assertTrue(webElement.isDisplayed()));
         softAssert.assertAll();
     }
 }

@@ -3,29 +3,37 @@ package hw2.steps;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
 import java.util.List;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class StepsForExercise2 extends BaseTestSteps {
 
+    public enum NamesForSelectSections {
+        CHECKBOX,
+        RADIO,
+        DROPDOWN
+    }
+
     public StepsForExercise2(WebDriver driver) {
         super(driver);
     }
 
     @Override
-    public void checkItemsAreDisplayedAndHadTheCorrectText(String xpathSearch,
-                                                           List<String> expectedText) {
+    public void checkItemsAreDisplayedAndHaveTheCorrectText(String xpathSearch,
+                                                            List<String> expectedText) {
         List<WebElement> webElements = driver.findElements(By.xpath(xpathSearch));
-        List<String> webElementsText = takeTextFromListOfWebElements(webElements);
+        List<String> webElementsText = getTextFromListOfWebElements(webElements);
         checkElementsFromTheListAreDisplayed(webElements);
         assertTrue(webElementsText.containsAll(expectedText),
                 "The list of web elements doesn't contain expected items");
     }
 
     public void clickOnTheSubcategory(String xpathSearch) {
-        WebElement item = driver.findElement(By.xpath(xpathSearch));
-        item.click();
+        // TODO It could be replaced by the driver.findElement(By.xpath(xpathSearch)).click(); -fixed
+        driver.findElement(By.xpath(xpathSearch)).click();
     }
 
     public void openDifferentElementsPage() {
@@ -48,7 +56,21 @@ public class StepsForExercise2 extends BaseTestSteps {
                 2);
     }
 
-    public void checkSelectItemAndCheckItInTheLog(String xpathOption, boolean isSelected) {
+    public void checkSelectItemAndCheckItInTheLog(NamesForSelectSections name, String option, boolean isSelected){
+        String xpathOption = "";
+        switch(name){
+            case CHECKBOX:
+                xpathOption = "//label[contains(.,'"+ option +"')]/input";
+                break;
+            case RADIO:
+                xpathOption ="//label[contains(.,'" + option + "')]/input";
+                break;
+            case DROPDOWN:
+                xpathOption = "//option[text()='" + option+ "']";
+                break;
+            default:
+                Assert.fail("Unexpected option passed in method checkSelectItemAndCheckItInTheLog");
+        }
         WebElement item = selectItemAndCheckIt(xpathOption, isSelected);
         checkLogSection(xpathOption, item);
     }
