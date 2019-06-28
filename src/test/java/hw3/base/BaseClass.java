@@ -15,6 +15,7 @@ import hw3.utils.UtilsFunctions;
 public class BaseClass {
     protected WebDriver driver;
     protected HomePageSteps steps;
+    // TODO Java Code Convention for the constants
     private static final String userData = "src/test/resources/properties/user.properties";
     private User user;
 

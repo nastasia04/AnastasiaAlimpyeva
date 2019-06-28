@@ -54,10 +54,14 @@ public class HomePage extends BasePage{
 
         return mainHeaderText;
     }
+
+    // TODO getIFrame
     public WebElement getIframe(){
 
         return iframe;
     }
+
+    // TODO switchToIFrame
     public void switchToIframe(){
 
         driver.switchTo().frame(iframe);
