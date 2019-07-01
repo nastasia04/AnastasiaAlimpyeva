@@ -14,6 +14,7 @@ import static org.testng.Assert.assertTrue;
 public abstract class BaseTestSteps {
     protected WebDriver driver;
 
+    // TODO Could be protected
     public BaseTestSteps(WebDriver driver) {
 
         this.driver = driver;
