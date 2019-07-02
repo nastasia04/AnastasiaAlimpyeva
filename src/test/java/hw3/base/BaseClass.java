@@ -15,8 +15,8 @@ import hw3.utils.UtilsFunctions;
 public class BaseClass {
     protected WebDriver driver;
     protected HomePageSteps steps;
-    // TODO Java Code Convention for the constants
-    private static final String userData = "src/test/resources/properties/user.properties";
+    // TODO Java Code Convention for the constants -fixed
+    private static final String USERDATA = "src/test/resources/properties/user.properties";
     private User user;
 
     @BeforeSuite
@@ -28,7 +28,7 @@ public class BaseClass {
     public void setUpMethod() {
         driver = new ChromeDriver();
         steps = new HomePageSteps(driver);
-        user = UtilsFunctions.readUserFromFile(userData);
+        user = UtilsFunctions.readUserFromFile(USERDATA);
         //1-4 steps for both tasks
         steps.loadPage(Url.HOME);
         steps.checkHomePageTitle(PageTitles.HOMEPAGE);

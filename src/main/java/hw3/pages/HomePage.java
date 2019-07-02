@@ -35,7 +35,6 @@ public class HomePage extends BasePage{
         return icons;
     }
 
-
     public List<WebElement> getWebElementsUnderTheIcons(){
 
         return textUnderTheIcons;
@@ -55,14 +54,14 @@ public class HomePage extends BasePage{
         return mainHeaderText;
     }
 
-    // TODO getIFrame
-    public WebElement getIframe(){
+    // TODO getIFrame - fixed
+    public WebElement getIFrame(){
 
         return iframe;
     }
 
-    // TODO switchToIFrame
-    public void switchToIframe(){
+    // TODO switchToIFrame - fixed
+    public void switchToIFrame(){
 
         driver.switchTo().frame(iframe);
     }

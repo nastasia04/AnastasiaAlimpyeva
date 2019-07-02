@@ -40,11 +40,11 @@ public class TestExercise1 extends BaseClass {
         step.checkTextOfTheMainHeaders(Header.MAINHEADER, Header.MAINHEADERTEXT);
 
         //10. Assert that there is the iframe in the center of page
-        step.checkIframeIsDisplayed();
+        step.checkIFrameIsDisplayed();
 
         //11-12. Switch to the iframe and check that there is Epam logo in the left top conner of iframe
         // and switch back to original window
-        step.checkEpamLogoOnIframe();
+        step.checkEpamLogoOnIFrame();
 
         //13. Assert a text of the sub header
         step.checkTextOfTheSubHeader(Header.GITHUB_HEADER);

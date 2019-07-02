@@ -52,15 +52,15 @@ public class HomePageSteps extends BaseTestSteps {
         checkElementIsDisplayedAndHaveCorrectText(homePage.getMainHeaderText(), mainHeaderText.toString());
     }
 
-    // TODO checkIFrameIsDisplayed
-    public void checkIframeIsDisplayed() {
+    // TODO checkIFrameIsDisplayed - fixed
+    public void checkIFrameIsDisplayed() {
 
-        checkElementIsDisplayed(homePage.getIframe());
+        checkElementIsDisplayed(homePage.getIFrame());
     }
 
-    // TODO checkEpamLogoOnIFrame
-    public void checkEpamLogoOnIframe() {
-        homePage.switchToIframe();
+    // TODO checkEpamLogoOnIFrame - fixed
+    public void checkEpamLogoOnIFrame() {
+        homePage.switchToIFrame();
         assertTrue(homePage.epamLogoIsDisplayed(), "Epam_logo is not displayed");
         homePage.switchBackToHomeWindow();
     }
