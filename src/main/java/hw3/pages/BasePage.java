@@ -31,7 +31,7 @@ public abstract class BasePage {
 
     private WebElement password;
 
-    @FindBy(id = "user-icon")
+    @FindBy(xpath = "//img[@id = 'user-icon']")
     private WebElement userIcon;
 
     @FindBy(id = "name")
