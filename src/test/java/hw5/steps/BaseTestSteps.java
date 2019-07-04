@@ -2,6 +2,7 @@ package hw5.steps;
 
 import hw3.enums.Url;
 import io.qameta.allure.Step;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.asserts.SoftAssert;
@@ -22,7 +23,9 @@ public abstract class BaseTestSteps {
     @Step("Load page '{0}'")
     public void loadPage(Url url) {
         driver.get(url.toString());
-        driver.manage().window().maximize();
+        Dimension dimension = new Dimension(450,600);
+        driver.manage().window().setSize(dimension);
+        //driver.manage().window().maximize();
     }
     @Step("Check page title. Title should be '{1}'")
     public void checkPageTitle(String actualTitle, String expectedTitle) {
