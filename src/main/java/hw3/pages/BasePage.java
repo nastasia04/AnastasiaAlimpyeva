@@ -4,10 +4,10 @@ import hw3.utils.UtilsFunctions;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.util.List;
 
@@ -68,9 +68,10 @@ public abstract class BasePage {
     }
     @Step("Login user with user name: '{0}'")
     public void login(String userName, String password) {
-        WebDriverWait wait = new WebDriverWait(driver, 2);
-        wait.until(ExpectedConditions.visibilityOf(userIcon));
-        userIcon.click();
+
+        Actions action = new Actions(driver);
+        action.moveToElement(userIcon).click().perform();
+        //userIcon.click();
         loginNameTextField.sendKeys(userName);
         this.password.sendKeys(password);
         loginButton.click();
