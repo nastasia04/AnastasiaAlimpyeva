@@ -72,7 +72,7 @@
         <profile>
             <id>Homework4</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <suite.xml>src/test/resources/hw4.xml</suite.xml>
