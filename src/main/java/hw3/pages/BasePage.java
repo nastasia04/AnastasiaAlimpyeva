@@ -1,6 +1,7 @@
 package hw3.pages;
 
 import hw3.utils.UtilsFunctions;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -63,7 +64,7 @@ public abstract class BasePage {
 
         return driver.getTitle();
     }
-
+    @Step("Login user with user name: '{0}'")
     public void login(String userName, String password) {
         userIcon.click();
         loginNameTextField.sendKeys(userName);
