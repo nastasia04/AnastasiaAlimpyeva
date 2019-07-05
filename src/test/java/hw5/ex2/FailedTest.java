@@ -29,7 +29,7 @@ public class FailedTest extends BaseClass {
     public void TestForExercise1() {
         step = new HomePageSteps(driver);
         //5. Assert Browser title
-        step.checkHomePageTitle(PageTitles.WRONGHOMEPAGE);
+        step.checkHomePageTitle(PageTitles.HOMEPAGE);
 
         //6. Assert that there are 4 items on the header section are displayed and they have proper texts
         step.checkHeaderItems(expectedHeaderMenuText);

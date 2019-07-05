@@ -1,7 +1,7 @@
 package hw5.ex1;
 
 import hw3.enums.*;
-import hw5.AllureListener;
+import hw5.AllureAttachmentListener;
 import hw5.base.BaseClass;
 import hw5.steps.DifferentElementsPageSteps;
 import io.qameta.allure.Feature;
@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
-@Listeners(AllureListener.class)
+@Listeners(AllureAttachmentListener.class)
 public class TestExercise2 extends BaseClass {
     private DifferentElementsPageSteps step;
     private static final List<String> expectedOptionsOnService = Arrays.asList(

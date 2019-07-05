@@ -4,7 +4,7 @@ import hw3.enums.ElementsCount;
 import hw3.enums.Header;
 import hw3.enums.PageTitles;
 import hw3.enums.Url;
-import hw5.AllureListener;
+import hw5.AllureAttachmentListener;
 import hw5.base.BaseClass;
 import hw5.steps.HomePageSteps;
 import io.qameta.allure.Feature;
@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
-@Listeners(AllureListener.class)
+@Listeners(AllureAttachmentListener.class)
 public class TestExercise1 extends BaseClass {
     private HomePageSteps step;
     private static final List<String> expectedHeaderMenuText = Arrays.asList
