@@ -22,10 +22,12 @@ public abstract class BaseTestSteps {
     }
     @Step("Load page '{0}'")
     public void loadPage(Url url) {
+
+        driver.manage().window().maximize();
         driver.get(url.toString());
-        Dimension dimension = new Dimension(450,600);
-        driver.manage().window().setSize(dimension);
-        //driver.manage().window().maximize();
+        //Dimension dimension = new Dimension(450,600);
+        //driver.manage().window().setSize(dimension);
+
     }
     @Step("Check page title. Title should be '{1}'")
     public void checkPageTitle(String actualTitle, String expectedTitle) {
