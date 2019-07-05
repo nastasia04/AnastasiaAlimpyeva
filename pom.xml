@@ -196,6 +196,7 @@
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                     </systemPropertyVariables>
 
+
                 </configuration>
                 <dependencies>
                 <dependency>
