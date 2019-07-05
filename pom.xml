@@ -198,7 +198,7 @@
                     <value>${project.build.directory}/allure-results</value>
                     </property>
                     </systemProperties>
-                   
+
                 </configuration>
                 <dependencies>
                 <dependency>
