@@ -1,6 +1,7 @@
 package hw5.steps;
 
 import hw3.enums.Url;
+import hw5.TestProvider;
 import io.qameta.allure.Step;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +20,7 @@ public abstract class BaseTestSteps {
     protected BaseTestSteps(WebDriver driver) {
 
         this.driver = driver;
+        TestProvider.getInstance().setDriver(driver);
     }
     @Step("Load page '{0}'")
     public void loadPage(Url url) {

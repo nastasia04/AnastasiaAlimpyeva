@@ -4,23 +4,28 @@ import hw3.enums.ElementsCount;
 import hw3.enums.Header;
 import hw3.enums.PageTitles;
 import hw3.enums.Url;
+import hw5.AllureAttachmentListener;
 import hw5.base.BaseClass;
 import hw5.steps.HomePageSteps;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Listeners(AllureAttachmentListener.class)
 public class FailedTest extends BaseClass {
     private HomePageSteps step;
     private static final List<String> expectedHeaderMenuText = Arrays.asList
-            ("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS", "WRONG TEXT");
+            ("HOME", "CONTACT FORM", "SERVICE", "METALS & COLORS");
     private static final List<String> expectedTextOnTheIndexPage = Arrays.asList(
             "To include good practices\nand ideas from successful\nEPAM project",
-            "To be flexible and\ncustomizable", "Wrong text");
+            "To be flexible and\ncustomizable",
+            "To be multiplatform",
+            "Already have good base\n(about 20 internal and\nsome external projects),\nwish to get more…");
 
     @Test
     @Story(value = "Test fails")
