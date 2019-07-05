@@ -5,7 +5,7 @@
         <classes>
             <class name="hw5.ex1.TestExercise1"/>
             <class name="hw5.ex1.TestExercise2"/>
-           
+
         </classes>
     </test>
 </suite>

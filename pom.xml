@@ -192,9 +192,13 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suite.xml}</suiteXmlFile>
                     </suiteXmlFiles>
-                    <systemPropertyVariables>
-                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
-                    </systemPropertyVariables>
+                    <systemProperties>
+                    <property>
+                    <name>allure.results.directory</name>
+                    <value>${project.build.directory}/allure-results</value>
+                    </property>
+                    </systemProperties>
+                   
                 </configuration>
                 <dependencies>
                 <dependency>
