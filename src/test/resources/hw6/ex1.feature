@@ -19,12 +19,8 @@ Feature: Login and Different Elements pages
     And in dropdown list I click on Different elements option
     Then 'DIFFERENT_ELEMENTS' page is opened
     And Check interface: checkBox 'CHECKBOX', Radio 'RADIO', SelectSection 'SELECT', Buttons 'BUTTON'
-    # TODO There is - it is where? - fixed
     And There is Right Section on Different Elements page
-    # TODO There is - it is where? - fixed
     And There is Left Section on Different Elements page
-    # TODO It will be better if you will add location for the elements below (I mean page name)
-    # TODO It is make step more clear - fixed
     When I select checkboxes 'WATER' on Different Elements page
     Then Log row changes status to 'true' for checkbox 'WATER' on Different Elements page
     When I select checkboxes 'WIND' on Different Elements page
