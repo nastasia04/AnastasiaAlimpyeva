@@ -1,5 +1,6 @@
 package hw6.user;
 
+// TODO @Getter & @Setter could be added here instead of getters and setters
 public class User {
     private String login;
     private String name;
