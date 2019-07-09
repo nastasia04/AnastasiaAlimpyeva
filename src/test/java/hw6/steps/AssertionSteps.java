@@ -70,29 +70,29 @@ public class AssertionSteps extends BaseSteps {
         checkSizeOfTheListOfElements(differentElementsPage.buttonsSize(), expectedButtons.getCount());
     }
 
-    @Then("There is Right Section")
+    @Then("There is Right Section on Different Elements page")
     public void checkRightSection() {
 
         checkElementIsDisplayed(differentElementsPage.rightSectionIsDisplayed());
     }
 
-    @Then("There is Left Section")
+    @Then("There is Left Section on Different Elements page")
     public void checkLeftSection() {
 
         checkElementIsDisplayed(differentElementsPage.leftSectionIsDisplayed());
     }
 
-    @Then("Log row changes status to '([^\"]*)' for checkbox '(WATER|EARTH|WIND|FIRE)'")
+    @Then("Log row changes status to '([^\"]*)' for checkbox '(WATER|EARTH|WIND|FIRE)' on Different Elements page")
     public void checkLogForCheckBox(String isSelected, CheckBox option) {
         checkLogSection(option.toString(), isSelected);
     }
 
-    @Then("Log row changes status to '([^\"]*)' for select option '(YELLOW|GREEN|RED|BLUE)'")
+    @Then("Log row changes status to '([^\"]*)' for select option '(YELLOW|GREEN|RED|BLUE)' on Different Elements page")
     public void checkLogForSelectSection(String isSelected, DropDown option) {
         checkLogSection(option.toString(), isSelected);
     }
 
-    @Then("Log row changes status to '([^\"]*)' for radio '(SELEN|GOLD|SILVER|BRONZE)'")
+    @Then("Log row changes status to '([^\"]*)' for radio '(SELEN|GOLD|SILVER|BRONZE)' on Different Elements page")
     public void checkLogForSelectSection(String isSelected, Radio option) {
         checkLogSection(option.toString(), isSelected);
     }

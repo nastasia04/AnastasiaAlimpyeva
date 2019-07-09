@@ -34,17 +34,17 @@ public class ActionSteps extends BaseSteps {
         differentElementsPage.clickDifferentElements();
     }
 
-    @When("I select checkboxes '(WATER|EARTH|WIND|FIRE)'")
+    @When("I select checkboxes '(WATER|EARTH|WIND|FIRE)' on Different Elements page")
     public void selectItemInTheCheckBox(CheckBox option) {
         differentElementsPage.selectItemFromCheckBox(option);
     }
 
-    @When("I select radio '(GOLD|SILVER|BRONZE|SELEN)'")
+    @When("I select radio '(GOLD|SILVER|BRONZE|SELEN)' on Different Elements page")
     public void selectItemInTheRadio(Radio option) {
         differentElementsPage.selectItemFromRadio(option);
     }
 
-    @When("I select in dropdown '(YELLOW|RED|BLUE|GREEN)'")
+    @When("I select in dropdown '(YELLOW|RED|BLUE|GREEN)' on Different Elements page")
     public void selectItemInTheDropDown(DropDown option) {
         differentElementsPage.clickOnDropDown().selectItemFromDropDown(option);
     }
