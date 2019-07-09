@@ -46,7 +46,7 @@ public class FailedTest extends BaseClass {
         step.checkTextsUnderTheIconsAreDisplayed(expectedTextOnTheIndexPage);
 
         //9. Assert a text of the main headers
-        step.checkTextOfTheMainHeaders(Header.WRONGHEADER, Header.WRONGHEADER);
+        step.checkTextOfTheMainHeaders(Header.MAINHEADER, Header.MAINHEADERTEXT);
 
         //10. Assert that there is the iframe in the center of page
         step.checkIFrameIsDisplayed();
@@ -56,7 +56,7 @@ public class FailedTest extends BaseClass {
         step.checkEpamLogoOnIFrame();
 
         //13. Assert a text of the sub header
-        step.checkTextOfTheSubHeader(Header.WRONGHEADER);
+        step.checkTextOfTheSubHeader(Header.GITHUB_HEADER);
 
         //14. Assert that JDI GITHUB is a link and has a proper URL
         step.checkLink(Url.GITHUB);

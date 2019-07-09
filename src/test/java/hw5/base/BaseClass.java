@@ -15,7 +15,7 @@ import org.testng.annotations.BeforeSuite;
 public class BaseClass {
     protected WebDriver driver;
     protected HomePageSteps steps;
-    private static final String USERDATA = "src/test/resources/properties/user.properties";
+    private static final String USERDATA = "src/TestRunner/resources/properties/user.properties";
     private User user;
 
     @BeforeSuite

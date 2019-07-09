@@ -46,6 +46,6 @@ public class BaseClass {
 
     private void setDriver(String driver){
         System.setProperty("webdriver.chrome.driver",
-                Paths.get("src/test/resources/driver/"+ driver).toAbsolutePath().toString());
+                Paths.get("src/TestRunner/resources/driver/"+ driver).toAbsolutePath().toString());
     }
 }

@@ -2,7 +2,6 @@ package hw3.enums;
 
 public enum PageTitles {
     HOMEPAGE("Home Page"),
-    WRONGHOMEPAGE("Home Page1"),
     DIFFERENTELEMNTS("Different Elements");
 
     private final String name;

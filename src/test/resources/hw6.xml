@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Homework6">
+    <test name="HW6">
+        <classes>
+            <class name="hw6.TestRunner"/>
+        </classes>
+    </test>
+</suite>

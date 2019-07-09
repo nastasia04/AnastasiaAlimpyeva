@@ -20,7 +20,7 @@ public class TestExercise2 extends BaseClass {
 
     @Test
     @Story(value = "Check page with different elements")
-    @Feature(value = "Exercise1 test")
+    @Feature(value = "Exercise1 TestRunner")
    public void TestForExercise2() {
         step = new DifferentElementsPageSteps(driver);
         //5 Click on "Service" subcategory in the header and check that drop down contains options

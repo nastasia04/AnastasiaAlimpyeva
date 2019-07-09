@@ -1,4 +1,4 @@
-package hw3.enums;
+package hw6.enums;
 
 public enum Header {
     MAINHEADER("EPAM framework Wishes…"),
@@ -9,7 +9,9 @@ public enum Header {
     GITHUB_HEADER("JDI Github");
     private final String text;
 
-    Header(String text) { this.text = text;}
+    Header(String text) {
+        this.text = text;
+    }
 
     @Override
     public String toString() {

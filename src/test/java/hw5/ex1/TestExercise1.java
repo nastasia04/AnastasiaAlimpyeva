@@ -27,7 +27,7 @@ public class TestExercise1 extends BaseClass {
 
     @Test
     @Story(value = "Check page with user login")
-    @Feature(value = "Exercise1 test")
+    @Feature(value = "Exercise1 TestRunner")
     public void TestForExercise1() {
         step = new HomePageSteps(driver);
         //5. Assert Browser title

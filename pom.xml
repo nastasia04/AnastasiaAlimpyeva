@@ -15,6 +15,7 @@
         <calculator.path>src/main/resources/calculator-1.0.jar</calculator.path>
         <allure.version>2.12.1</allure.version>
         <aspectj.version>1.8.10</aspectj.version>
+        <cucumber.version>1.2.5</cucumber.version>
     </properties>
 
     <profiles>
@@ -22,7 +23,7 @@
         <profile>
             <id>addAndSubtract</id>
             <activation>
-                <activeByDefault>false</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <suite.xml>src/test/resources/addAndSubtract.xml</suite.xml>
@@ -79,12 +80,22 @@
             </properties>
         </profile>
         <profile>
-            <id>Homework5</id>
+        <id>Homework5</id>
+        <activation>
+            <activeByDefault>false</activeByDefault>
+        </activation>
+        <properties>
+            <suite.xml>src/test/resources/hw5.xml</suite.xml>
+        </properties>
+        </profile>
+
+        <profile>
+            <id>Homework6</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suite.xml>src/test/resources/hw5.xml</suite.xml>
+                <suite.xml>src/test/resources/hw6.xml</suite.xml>
             </properties>
         </profile>
     </profiles>
@@ -163,6 +174,20 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.9.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

@@ -16,7 +16,7 @@ public class BaseClass {
     protected WebDriver driver;
     protected HomePageSteps steps;
     // TODO Java Code Convention for the constants -fixed
-    private static final String USERDATA = "src/test/resources/properties/user.properties";
+    private static final String USERDATA = "src/TestRunner/resources/properties/user.properties";
     private User user;
 
     @BeforeSuite

@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class BaseClass {
     protected WebDriver driver;
     protected BasePageSteps steps;
-    private static final String USERDATA = "src/test/resources/properties/user.properties";
+    private static final String USERDATA = "src/TestRunner/resources/properties/user.properties";
     protected User user;
     protected BasePageSteps basicSteps;
 
